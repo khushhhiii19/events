@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Circle</title>
+</head>
+
+<style>
+    .box {
+        height: fit-content;
+        width: fit-content;
+        display: flex;
+        gap: 50px;
+        border: 7px solid brown
+        padding: 20px;
+        background-color: black;
+
+    }
+
+    .circle1 {
+        height: 200px;
+        width: 200px;
+        border-radius: 100%;
+        background-color: burlywood;
+        transition: all 1s;
+    }
+</style>
+
+<body>
+    <div class="box">
+
+        <div class="circle1" onmouseover="circle1()" onmouseout="c1()" id="s1"> </div>
+
+        <div class="circle1" onmouseover="circle2()" onmouseout="c2()" id="s2"></div>
+    </div>
+</body>
+
+<script>
+
+    function circle1() {
+        document.getElementById('s1').style.transform = "scale(0.8)"
+        document.getElementById('s2').style.transform = "scale(1.1)"
+
+
+    }
+    function c1() {
+        document.getElementById('s1').style.backgroundColor ="blue"
+    }
+
+    function c2() {
+        document.getElementById('s2').style.backgroundColor ="blue"
+    }
+    function circle2() {
+        document.getElementById('s1').style.transform = "scale(1.1)"
+        document.getElementById('s2').style.transform = "scale(0.8)"
+
+    }
+</script>
+
+</html>
